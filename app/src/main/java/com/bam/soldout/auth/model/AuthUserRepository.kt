@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 class AuthUserRepository(var service: IAuthService) {
 
     fun login(login: String, pass: String): Flow<Result<User>> {
-        return service.login(User(login = login, pass = pass))
+        return service.login(User(login = login, pass = pass, displayName = ""))
     }
 
     fun logout() = service.logout<Nothing>()

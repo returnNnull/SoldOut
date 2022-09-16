@@ -7,4 +7,5 @@ interface IAuthService {
     fun <T> register(data: T): Flow<Result<T>>
     fun <T> login(data: T): Flow<Result<T>>
     fun <T> logout(): Flow<Result<T>>
+    fun <T> refreshToken(data: T): Flow<Result<T>>
 }

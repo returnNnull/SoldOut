@@ -7,7 +7,7 @@ import com.bam.soldout.auth.model.AuthUserRepository
 import com.bam.soldout.ui.screens.auth.LoginScreenState
 import kotlinx.coroutines.launch
 
-class LoginViewModel(val repository: AuthUserRepository) : ViewModel() {
+class LoginViewModel(private val repository: AuthUserRepository) : ViewModel() {
 
     var state = mutableStateOf(LoginScreenState())
         private set
